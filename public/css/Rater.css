@@ -1,0 +1,21 @@
+.topline {
+	display: flex;
+}
+
+.rating_Good {
+	background-image: url(../images/like.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-grow: 1;
+}
+
+.rating_Bad {
+	background-image: url(../images/dislike.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-grow: 1;
+}
+
+input {
+	max-width: 85%;
+}
