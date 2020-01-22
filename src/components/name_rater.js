@@ -7,7 +7,7 @@ function Rater({ rater: {id, name, rating}, onRateWell, onRatePoorly}) {
 		<div className={`rater`}>
 			<div className="topline">
 				<div className="name">
-					<input type="text" value={name} readOnly={true} />
+					<input type="text" value={name} readOnly={false} />
 				</div>
 				<div className={`rating_${rating}`} />
 				
