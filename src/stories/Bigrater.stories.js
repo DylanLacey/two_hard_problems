@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import BigRater from '../components/big_rater.js'
 import Screener, {Steps} from 'screener-storybook/src/screener';
@@ -11,7 +11,6 @@ export default {
 
 export const raterData = {
 	id: '34',
-	// name: 'Huge Chungus',
 	rating: 0
 };
 
@@ -20,23 +19,16 @@ export const actionsData = {
 	onRatePoorly: action('onRatePoorly')
 };
 
-export const Unrated = () => {
-	return <BigRater rater={{...raterData}} {...actionsData} />;
-};
-
-export const RatedWell = () => {
+export const RatedWell = function() {
+	// const [state, setState] = useState();
+	
 	return <Screener steps={new Steps()
-		.click('.name')
-		.snapshot('name clicked')
-		.setValue('.name', "Somesone")
+		.click('#thumbsup')
+		.snapshot('Upboat')
+		.click('#thumbsdown')
+		.click('#thumbsdown')
+		.snapshot('Downboat')
 		.end()}>
 			<BigRater rater={{...raterData, rating: 5}} {...actionsData} />
 		</Screener>
 };
-
-export const RatedPoorly = () => {
-	return <BigRater rater={{...raterData, rating: -3}} {...actionsData} />;
-};
-
-
-// RatedPoorly.story = { name: 'Renamed'};

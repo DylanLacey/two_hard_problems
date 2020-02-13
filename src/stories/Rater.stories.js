@@ -2,6 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Rater from '../components/name_rater.js'
 // import { Button } from '@storybook/react/demo';
+import Screener, {Steps} from 'screener-storybook/src/screener';
 
 export default {
   title: 'Rater',
@@ -25,7 +26,15 @@ export const Unrated = () => {
 };
 
 export const RatedWell = () => {
-	return <Rater rater={{...raterData, rating: 'Good'}} {...actionsData} />;
+	return <Screener steps={new Steps()
+	.click('#thumbsup')
+	.snapshot('Upboat')
+	.click('#thumbsdown')
+	.click('#thumbsdown')
+	.snapshot('Downboat')
+	.end()}>
+		<Rater rater={{...raterData, rating: 'Good'}} {...actionsData} />;
+	</Screener>
 };
 
 export const RatedPoorly = () => {
