@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../../public/css/Rater.css';
+import '../Rater.css';
 	
 function Rater({ rater: {id, name, rating}, onRateWell, onRatePoorly}) {
 	return (

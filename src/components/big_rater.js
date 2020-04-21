@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import PropTypes from 'prop-types';
-import '../../public/css/Rater.css';
+import '../Rater.css';
 	
 function BigRater({ rater: {id, name, rating}, onRateWell, onRatePoorly}) {
 	const [count, setCount] = useState(rating);

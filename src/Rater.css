@@ -3,14 +3,14 @@
 }
 
 .rating_Good {
-	background-image: url(../images/like.png);
+	background-image: url(like.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	flex-grow: 1;
 }
 
 .rating_Bad {
-	background-image: url(../images/dislike.png);
+	background-image: url(dislike.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	flex-grow: 1;

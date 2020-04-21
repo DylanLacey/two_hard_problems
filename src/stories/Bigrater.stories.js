@@ -20,7 +20,7 @@ export const actionsData = {
 };
 
 export const RatedWell = function() {
-	// const [state, setState] = useState();
+	const [state, setState] = useState();
 	
 	return <Screener steps={new Steps()
 		.click('#thumbsup')
