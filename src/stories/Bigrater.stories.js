@@ -20,11 +20,11 @@ export const actionsData = {
 };
 
 export const RatedWell = function() {
-	const [state, setState] = useState();
 	
 	return <Screener steps={new Steps()
 		.click('#thumbsup')
 		.snapshot('Upboat')
+		.click('#thumbsdown')
 		.click('#thumbsdown')
 		.click('#thumbsdown')
 		.snapshot('Downboat')
